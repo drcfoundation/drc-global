@@ -12,6 +12,16 @@ const uniswapButton: Record<Language, string> = {
   zh: "UNISWAP 购买DRC",
 };
 
+const sushiSwapButton: Record<Language, string> = {
+  en: "BUY DRC ON SUSHISWAP",
+  zh: "SUSHISWAP 购买DRC",
+};
+
+const bancorButton: Record<Language, string> = {
+  en: "BUY DRC ON BANCOR",
+  zh: "BANCOR 购买DRC",
+};
+
 const bilaxyButton: Record<Language, string> = {
   en: "BUY DRC ON BILAXY",
   zh: "BILAXY 购买DRC",
@@ -28,7 +38,7 @@ const quickswapButton: Record<Language, string> = {
 };
 
 const bittrexButton: Record<Language, string> = {
-  en: "BUY ON BITTREX GLOBAL",
+  en: "BUY DRC ON BITTREX GLOBAL",
   zh: "BITTREX GLOBAL 购买DRC",
 };
 
@@ -47,6 +57,24 @@ const Exchanges: React.FC<ExchangesProps> = ({ lang = "en" }) => {
             css={{ width: "100%" }}
           >
             {uniswapButton[lang]}
+          </Button>
+        </Column>
+        <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
+          <Button
+            to={marketLinks.sushiswap.url}
+            target="_blank"
+            css={{ width: "100%" }}
+          >
+            {sushiSwapButton[lang]}
+          </Button>
+        </Column>
+        <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
+          <Button
+            to={marketLinks.bancor.url}
+            target="_blank"
+            css={{ width: "100%" }}
+          >
+            {bancorButton[lang]}
           </Button>
         </Column>
         <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
@@ -92,7 +120,7 @@ const Exchanges: React.FC<ExchangesProps> = ({ lang = "en" }) => {
         <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
           <div>
             <Button
-              to="https://quickswap.exchange/#/swap?outputCurrency=0xfed16c746cb5bfed009730f9e3e6a673006105c7"
+              to={marketLinks.quickswap.url}
               target="_blank"
               css={{ width: "100%" }}
             >
@@ -117,7 +145,7 @@ const Exchanges: React.FC<ExchangesProps> = ({ lang = "en" }) => {
 
       <div css={{ display: "flex", justifyContent: "center" }}>
         <Button
-          to="https://global.bittrex.com/Market/Index?MarketName=ETH-DRC"
+          to={marketLinks.bittrex.url}
           target="_blank"
           css={{ width: "100%", maxWidth: grid(34.5) }}
         >

@@ -41,8 +41,12 @@ export const marketResourceLinks = [
   marketLinks.coingecko,
   marketLinks.coinMarketCap,
   marketLinks.uniswapTrade,
-  marketLinks.dexTools,
+  marketLinks.bittrex,
   marketLinks.bilaxy,
+  marketLinks.quickswap,
+  marketLinks.bancor,
+  marketLinks.sushiswap,
+  marketLinks.dexTools,
   marketLinks.chartEx,
 ];
 
