@@ -65,9 +65,11 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
         {context.isConnected && <AccessDr setId={setId} />}
       </MarginBox>
 
-      <MarginBox margin={{ bottom: grid(4) }}>
-        <DrDepositWarning />
-      </MarginBox>
+      {setId !== "s2" && (
+        <MarginBox margin={{ bottom: grid(4) }}>
+          <DrDepositWarning />
+        </MarginBox>
+      )}
 
       <MarginBox margin={{ bottom: grid(4) }}>
         <PortfolioAllocation {...drVaultData} />
