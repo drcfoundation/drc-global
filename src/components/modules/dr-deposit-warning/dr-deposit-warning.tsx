@@ -9,7 +9,7 @@ const DrDepositWarning: React.FC = () => {
   return (
     <div css={styles.root}>
       <Heading margin={{ bottom: grid(2) }}>
-        Important announcement for s3 DR Vaults
+        Important announcement for s3 DR Vault
       </Heading>
 
       <Text
@@ -22,10 +22,10 @@ const DrDepositWarning: React.FC = () => {
       </Text>
 
       <Text component="div" textSize={14} margin={{ bottom: grid(2) }}>
-        The assets for s3 DR Vaults are routed through Uniswap v2 liquidity and
+        The assets for s3 DR Vault is routed through Uniswap v2 liquidity and
         during the period of Uniswap v2 and v3 migration, it’s uncertain whether
         all of the projects will remain on Uniswap v2 or move to v3. If they
-        move, then the s3 DR Vaults may experience liquidity issues.
+        move, then the s3 DR Vault may experience liquidity issues.
       </Text>
 
       <Text component="div" textSize={14} margin={{ bottom: grid(2) }}>
