@@ -30,7 +30,7 @@ const DrDepositWarning: React.FC = () => {
 
       <Text component="div" textSize={14} margin={{ bottom: grid(2) }}>
         Further, there are unclear regulatory guidelines for DeFi investment
-        protocols at present and this may present a challenge for s3 DR Vaults
+        protocols at present and this may present a challenge for s3 DR Vault's
         compliance.
       </Text>
 
