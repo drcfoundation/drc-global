@@ -128,7 +128,7 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
                   `${formatNumber({
                     value: vaultInfo.feePercentage,
                     round: 1,
-                  })}%` || "1%"
+                  })}%` || "0%"
                 }
               />
             </Column>

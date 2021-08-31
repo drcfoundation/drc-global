@@ -8,7 +8,7 @@ export const DR_FAQ_QUESTIONS = [
     ],
   },
   {
-    question: "How do I start using the DRC Vault or DR Vault Sets??",
+    question: "How do I start using the DRC Vault or DR Vault Sets?",
     answer: [
       "If you currently hold DRC tokens in your non-custodial wallet, such as MetaMask, you can start using the DR straight away. All you need to do is consider which DR option is right for you, then ‘Launch App’ and ‘Connect Wallet’ to access your secure DRC Vault or DR Vault Set Dashboard. Next, choose the amount of DRC tokens you would like to deposit, then approve, confirm and complete the transaction.",
     ],
@@ -17,7 +17,7 @@ export const DR_FAQ_QUESTIONS = [
     question: "What are the benefits of using the DR Vault Sets?",
     answer: [
       "Digital Reserve is an online platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, by utilising DR Vault Sets, with the purpose of capital preservation and hedging inflation risks. DRC holders will also have access to alternative vaults, designed for users with higher risk tolerance.",
-      "DR Vault Set users can take advantage of the portfolio diversification benefits, portfolio rebalancing, and security of holdings. Also, DR platform offers user friendly interface, instant deposits and withdrawals, and portfolio performance tracking.",
+      "DR Vault Set users can take advantage of the portfolio diversification benefits and security of holdings. Also, DR platform offers user friendly interface, and instant deposits and withdrawals.",
     ],
   },
   {
@@ -52,15 +52,6 @@ export const DR_FAQ_QUESTIONS = [
     ],
   },
   {
-    question: "What is rebalancing and how does DR do this?",
-    answer: [
-      "Rebalancing is the process of realigning the weighting of a portfolio of assets to the strategy allocation that is defined.",
-      "When rebalancing, the DR Smart Contract will check each of the portfolio asset's worth, and the DR Vault's total worth. Based on the designed portfolio allocations, the DR Smart Contract will calculate how much each asset should be worth.",
-      "Some of the assets' worth might exceed what it should be, whilst some would be below what it should be. The DR Smart Contract will then convert the overflowed parts of the assets to ETH. And then further swap the ETH to make up for the assets that are below the designed percentage value.",
-      `Rebalancing is only executable by the DR Smart Contract owner - <a href="https://drc.foundation/fund/" target="_blank" rel="noreferrer">the DRC Foundation Fund Multi-sig Wallet</a> and will occur either weekly or monthly, depending on market conditions.`,
-    ],
-  },
-  {
     question: "What happens when I withdraw from a DR Vault Set?",
     answer: [
       "When you choose to withdraw your capital from a DR Vault Set, the DR Smart Contract will calculate the share of the assets you wish to withdraw and convert that to WETH, then further convert to DRC and transfer to your personal wallet.",
@@ -83,7 +74,7 @@ export const DR_FAQ_QUESTIONS = [
     question: "Does the DR have an insurance policy?",
     answer: [
       "The Digital Reserve does not provide insurance coverage of funds held in the DR Vault Sets or DRC Vault.",
-      "Please note that DR Smart Contract security was verified by an independent blockchain development firm and DR admins are not able to withdraw any funds from DR Vaults, because of the DR Smart Contract restrictions.",
+      "Please note that DR Smart Contract security was verified by an independent blockchain development firm.",
     ],
   },
   {
@@ -95,8 +86,7 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "I need some help, how can I get support?",
     answer: [
-      `Feel free to jump onto either the <a href="${communityLinks.telegram.url}" target="_blank" rel="noreferrer">DRC Telegram Group</a> or <a href="${communityLinks.discord.url}" target="_blank" rel="noreferrer">DRC Discord Channel</a> and let us know what help or support you need with using the Digital Reserve.`,
-      "A YouTube tutorial will be provided soon.", // TODO
+      `Feel free to jump onto either the <a href="${communityLinks.telegram.url}" target="_blank" rel="noreferrer">DRC Telegram Group</a> or <a href="${communityLinks.discord.url}" target="_blank" rel="noreferrer">DRC Discord Channel</a>.`,
     ],
   },
 ];

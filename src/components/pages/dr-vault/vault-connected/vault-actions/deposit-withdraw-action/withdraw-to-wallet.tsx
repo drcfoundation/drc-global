@@ -28,12 +28,10 @@ const WithdrawToWallet: React.FC = () => {
   } = React.useContext(DrContext);
 
   const totalWorth = data?.totalWorthInDrc || 0;
-  const feePercentage = data?.feePercentage || 1;
+  const feePercentage = data?.feePercentage || 0;
 
   const uniswapFee = Math.floor(value * 0.006);
-  const withdrawalFee = Math.floor(
-    (value - uniswapFee) * (feePercentage / 100)
-  );
+
   const realWithdrawAmount = Math.round(
     (value - uniswapFee) * (1 - feePercentage / 100)
   );
@@ -150,30 +148,13 @@ const WithdrawToWallet: React.FC = () => {
           textSize={12}
           type="secondary"
           css={styles.inlineContainer}
-          margin={{ bottom: grid(1.5) }}
+          margin={{ bottom: grid(3) }}
         >
           <span>Uniswap LP</span>
           <span>
             ~0.6% (~
             {formatNumber({
               value: uniswapFee,
-            })}{" "}
-            DRC)
-          </span>
-        </Text>
-
-        <Text
-          component="div"
-          textSize={12}
-          type="secondary"
-          css={styles.inlineContainer}
-          margin={{ bottom: grid(3) }}
-        >
-          <span>Withdrawal fee</span>
-          <span>
-            1% (~
-            {formatNumber({
-              value: withdrawalFee,
             })}{" "}
             DRC)
           </span>
