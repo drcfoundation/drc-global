@@ -76,7 +76,7 @@ const VaultCard: React.FC<VaultCardProps> = (vaultInfo) => {
         {!isArchived ? "Deposit and Withdraw DRC" : "Please withdraw DRC"}
       </Text>
 
-      {(isMobile || isArchived) && (
+      {(isMobile || !isArchived) && (
         <>
           <Text
             component="div"
@@ -91,7 +91,7 @@ const VaultCard: React.FC<VaultCardProps> = (vaultInfo) => {
         </>
       )}
 
-      {!isMobile && !isArchived && (
+      {!isMobile && isArchived && (
         <MarginBox margin={{ bottom: grid(3) }}>
           <Row isCenter={true}>
             {allocations.map((asset) => (

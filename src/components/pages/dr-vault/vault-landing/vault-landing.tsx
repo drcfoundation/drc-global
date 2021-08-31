@@ -18,7 +18,6 @@ import InfoCardSmall from "../../../ui-library/vault-components/info-card/info-c
 import SlideOutDrPodInfo from "../../../ui-library/vault-components/slide-out-vault-info/slide-out-dr-pod-info";
 import AccessDr from "./access-dr/access-dr";
 import ConnectWallet from "./access-dr/connect-wallet";
-import DrMaintenance from "./access-dr/dr-maintenance";
 import DrPerformanceGraph from "./dr-performance-graph/dr-performance-graph";
 import PortfolioAllocation from "./portfolio-allocation/portfolio-allocation";
 
@@ -59,10 +58,6 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
     };
   }, []);
 
-  if (setId === "s1") {
-    return <DrMaintenance setId={setId} />;
-  }
-
   return (
     <div>
       <MarginBox margin={{ bottom: grid(4) }}>
@@ -70,7 +65,7 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
         {context.isConnected && <AccessDr setId={setId} />}
       </MarginBox>
 
-      {setId !== "s2" && (
+      {setId === "s3" && (
         <MarginBox margin={{ bottom: grid(4) }}>
           <DrDepositWarning />
         </MarginBox>

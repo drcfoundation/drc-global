@@ -125,14 +125,13 @@ export const DR_VAULTS: Record<SetId, DrVaultInfo> = {
     url: "/platform/dr-vault-s1/",
     allocations: [
       { ...drAssets.wbtc, percentage: 40 },
-      { ...drAssets.paxg, percentage: 40 },
-      { ...drAssets.weth, percentage: 20 },
+      { ...drAssets.weth, percentage: 40 },
+      { ...drAssets.paxg, percentage: 20 },
     ],
     details: [
       "Currently, gold and Bitcoin are considered the most efficient SoV assets. Both of them not much correlated with traditional asset classes and retain their value during economic downturns.",
       "Ethereum is positioned to become a SoV because of the upcoming staking mechanism (Ethereum 2.0) and declining ETH inflation rate. ",
     ],
-    isArchived: true,
   },
   s2: {
     setId: "s2",
