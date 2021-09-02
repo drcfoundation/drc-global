@@ -1,10 +1,8 @@
-import { communityLinks } from "../resource-links";
-
 export const DR_FAQ_QUESTIONS = [
   {
     question: "What’s different between the DRC Vault and DR Vault Sets?",
     answer: [
-      "While DRC Vault’s main purpose is to securely store DRC and it better serves users who believe in the token price appreciation, DR Vault Sets are designed for diversification and hedging purposes and allow users to easily convert their DRC to SoV and alternative assets, based on individual financial goals and risk tolerance.",
+      "While DRC Vault’s main purpose is to securely store DRC and it better serves users who believe in the token price appreciation, DR Vault Sets are designed for diversification and hedging purposes and allow users to easily convert their DRC to SoV assets, based on individual financial goals and risk tolerance.",
     ],
   },
   {
@@ -16,7 +14,7 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "What are the benefits of using the DR Vault Sets?",
     answer: [
-      "Digital Reserve is an online platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, by utilising DR Vault Sets, with the purpose of capital preservation and hedging inflation risks. DRC holders will also have access to alternative vaults, designed for users with higher risk tolerance.",
+      "Digital Reserve is an online platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, by utilising DR Vault Sets, with the purpose of capital preservation and hedging inflation risks.",
       "DR Vault Set users can take advantage of the portfolio diversification benefits and security of holdings. Also, DR platform offers user friendly interface, and instant deposits and withdrawals.",
     ],
   },
@@ -60,7 +58,7 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "What happens if there’s not enough DRC liquidity?",
     answer: [
-      "This is not possible based on how the Uniswap Router and AMM (Automatic Market Making) mechanics work. There will always be liquidity in the DRC Liquidity Pool as it is time-locked and unable to be pulled unexpectedly from the decentralised Uniswap market. The main DRC Liquidity Pool keys will also be managed by the DRC Foundation upon unlock in May 2021.",
+      "This is not possible based on how the Uniswap Router and AMM (Automatic Market Making) mechanics work. There will always be liquidity in the DRC Liquidity Pool as it is time-locked and unable to be pulled unexpectedly from the decentralised Uniswap market.",
     ],
   },
   {
@@ -73,20 +71,13 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "Does the DR have an insurance policy?",
     answer: [
-      "The Digital Reserve does not provide insurance coverage of funds held in the DR Vault Sets or DRC Vault.",
-      "Please note that DR Smart Contract security was verified by an independent blockchain development firm.",
+      "The Digital Reserve does not provide insurance coverage of funds held in the DR Vault Sets or DRC Vault. Please note that DR Smart Contract security was verified by an independent blockchain development firm.",
     ],
   },
   {
     question: "Should I use the DR Vault Sets or just hold DRC?",
     answer: [
       "If you already hold DRC tokens, using the Digital Reserve is optional, as you can simply hold DRC tokens and rely on its potential price appreciation. Utilising the DRC Vault is one way to hold your DRC and still be part of a decentralised application to securely store your DRC tokens.",
-    ],
-  },
-  {
-    question: "I need some help, how can I get support?",
-    answer: [
-      `Feel free to jump onto either the <a href="${communityLinks.telegram.url}" target="_blank" rel="noreferrer">DRC Telegram Group</a> or <a href="${communityLinks.discord.url}" target="_blank" rel="noreferrer">DRC Discord Channel</a>.`,
     ],
   },
 ];

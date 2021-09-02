@@ -55,12 +55,6 @@ const Home: React.FC<HomeProps> = ({ lang = "en" }) => {
         </MarginBox>
       )}
 
-      <MarginBox
-        margin={{ desktop: { bottom: grid(8) }, mobile: { bottom: grid(5) } }}
-      >
-        <Gen01Nft lang={lang} />
-      </MarginBox>
-
       <MarginBox margin={{ bottom: grid(5) }}>
         <RelatedLinks lang={lang} />
       </MarginBox>
