@@ -32,7 +32,7 @@ export const WhitePaperContentEn = [
     heading: "V. DIGITAL RESERVE PLATFORM",
     contents: [
       "DRC token has the unique utility of providing DRC holders with the exclusive access to the Digital Reserve, an essential part of the DRC ecosystem. Digital Reserve is an online platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, with the purpose of capital preservation and hedging inflation risks.",
-      "The composition and asset allocation of Digital Reserve vaults are decided by the DRC community. There is no single entity or person that manage Digital Reserve, as users interact directly with the Digital Reserve smart contract. The smart contract has been created by the DRC community and audited by the Dedaub blockchain security firm. Digital Reserve assets are held in the secure multisig wallet managed by the DRC community.",
+      "The composition and asset allocation of Digital Reserve vaults are decided by the DRC community. There is no single entity or person that manage Digital Reserve, as users interact directly with the Digital Reserve smart contract. The smart contract has been created by the DRC community and audited by the Dedaub blockchain security firm. Digital Reserve assets are held in the smart contract and secured by the Ethereum network.",
     ],
   },
   {
