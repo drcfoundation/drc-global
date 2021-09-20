@@ -80,4 +80,12 @@ export const DR_FAQ_QUESTIONS = [
       "If you already hold DRC tokens, using the Digital Reserve is optional, as you can simply hold DRC tokens and rely on its potential price appreciation. Utilising the DRC Vault is one way to hold your DRC and still be part of a decentralised application to securely store your DRC tokens.",
     ],
   },
+  {
+    question:
+      "Can I interact with the DR Vault's smart contracts without using the DRC Global website?",
+    answer: [
+      "Yes, the DR Vaults are decentralised smart contracts that are open for everyone to use. Users can interact with them from Etherscan or through code.",
+      `A "depositDrc" function is provided for depositing into each DR Vault. And to withdraw DRC, users can choose to use either the "withdrawDrc" or the "withdrawPercentage" function.`,
+    ],
+  },
 ];

@@ -5,6 +5,7 @@ import ChevronWhiteIcon from "../../../images/icons/chevron-icon-white.svg";
 import Image from "../image/image";
 import { SiteContext } from "../../../site-context/site-context";
 import styles from "./accordion-heading.styles";
+import { grid } from "../design-tokens/grid";
 
 interface AccordionHeadingProps {
   isOpen: boolean;
@@ -21,7 +22,9 @@ const AccordionHeading: React.FC<AccordionHeadingProps> = ({
 
   return (
     <div role="button" css={styles.root} onClick={onClick}>
-      <Heading size="small">{children}</Heading>
+      <Heading size="small" css={{ marginRight: grid(2) }}>
+        {children}
+      </Heading>
 
       <div
         css={[
