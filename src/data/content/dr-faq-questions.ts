@@ -59,7 +59,7 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "What happens if there’s not enough DRC liquidity?",
     answer: [
-      "This is not possible based on how the Uniswap Router and AMM (Automatic Market Making) mechanics work. There will always be liquidity in the DRC Liquidity Pool as it is time-locked and unable to be pulled unexpectedly from the decentralised Uniswap market.",
+      "This is not possible based on how the Uniswap Router and AMM (Automatic Market Making) mechanics work. Uniswap DRC LP tokens provided from the genesis liquidity have been burned to ensure there is always liquidity.",
     ],
   },
   {
