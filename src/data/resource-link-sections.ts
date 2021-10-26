@@ -42,12 +42,8 @@ export const marketResourceLinks = [
   marketLinks.coinMarketCap,
   marketLinks.uniswapTrade,
   marketLinks.bittrex,
-  marketLinks.bilaxy,
-  marketLinks.quickswap,
   marketLinks.bancor,
-  marketLinks.sushiswap,
   marketLinks.dexTools,
-  marketLinks.chartEx,
 ];
 
 export const informationResourceLink = [

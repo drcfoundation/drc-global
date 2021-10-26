@@ -5,36 +5,15 @@ import Button from "../../../ui-library/button/button";
 import Column from "../../../ui-library/column-system/column";
 import Row from "../../../ui-library/column-system/row";
 import { grid } from "../../../ui-library/design-tokens/grid";
-import Text from "../../../ui-library/text/text";
 
 const uniswapButton: Record<Language, string> = {
   en: "BUY DRC ON UNISWAP",
   zh: "UNISWAP 购买DRC",
 };
 
-const sushiSwapButton: Record<Language, string> = {
-  en: "BUY DRC ON SUSHISWAP",
-  zh: "SUSHISWAP 购买DRC",
-};
-
 const bancorButton: Record<Language, string> = {
   en: "BUY DRC ON BANCOR",
   zh: "BANCOR 购买DRC",
-};
-
-const bilaxyButton: Record<Language, string> = {
-  en: "BUY DRC ON BILAXY",
-  zh: "BILAXY 购买DRC",
-};
-
-const dharmaButton: Record<Language, string> = {
-  en: "BUY DRC WITH FIAT (U.S ONLY)",
-  zh: "美元购买DRC（限美国）",
-};
-
-const quickswapButton: Record<Language, string> = {
-  en: "BUY DRC ON QUICKSWAP",
-  zh: "QUICKSWAP 购买DRC",
 };
 
 const bittrexButton: Record<Language, string> = {
@@ -61,85 +40,12 @@ const Exchanges: React.FC<ExchangesProps> = ({ lang = "en" }) => {
         </Column>
         <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
           <Button
-            to={marketLinks.sushiswap.url}
-            target="_blank"
-            css={{ width: "100%" }}
-          >
-            {sushiSwapButton[lang]}
-          </Button>
-        </Column>
-        <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
-          <Button
             to={marketLinks.bancor.url}
             target="_blank"
             css={{ width: "100%" }}
           >
             {bancorButton[lang]}
           </Button>
-        </Column>
-        <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
-          <Button
-            to={marketLinks.bilaxy.url}
-            target="_blank"
-            css={{ width: "100%" }}
-          >
-            {bilaxyButton[lang]}
-          </Button>
-        </Column>
-        <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
-          <div>
-            <Button
-              to="https://www.dharma.io/token/0xa150db9b1fa65b44799d4dd949d922c0a33ee606"
-              target="_blank"
-              css={{ width: "100%" }}
-            >
-              {dharmaButton[lang]}
-            </Button>
-            {lang === "en" && (
-              <Text
-                component="div"
-                type="secondary"
-                textSize={12}
-                textAlign="center"
-                margin={{ top: grid(1.5) }}
-              >
-                <a
-                  href="https://dharma.io"
-                  target="_blank"
-                  rel="noreferrer"
-                  css={{ textDecoration: "underline" }}
-                >
-                  dharma.io
-                </a>{" "}
-                allows you to buy directly from your US bank account, wire
-                transfer or using your deposited crypto
-              </Text>
-            )}
-          </div>
-        </Column>
-        <Column spanLg={6} spanMd={6} spanSm={6} spanXs={12}>
-          <div>
-            <Button
-              to={marketLinks.quickswap.url}
-              target="_blank"
-              css={{ width: "100%" }}
-            >
-              {quickswapButton[lang]}
-            </Button>
-
-            {lang === "en" && (
-              <Text
-                component="div"
-                type="secondary"
-                textSize={12}
-                textAlign="center"
-                margin={{ top: grid(1.5) }}
-              >
-                Quickswap, a DEX on the Matic/Polygon network, where users can
-                enjoy low fee trading with the DRC/MATIC pair
-              </Text>
-            )}
-          </div>
         </Column>
       </Row>
 

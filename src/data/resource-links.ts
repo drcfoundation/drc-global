@@ -7,11 +7,8 @@ import EtherscanBlackIcon from "../images/resources/black/etherscan.svg";
 import CoingeckoBlackIcon from "../images/resources/black/coingecko.svg";
 import CoinmarketcapBlackIcon from "../images/resources/black/coinmarketcap.svg";
 import DEXToolsBlackIcon from "../images/resources/black/dextools.svg";
-import BilaxyBlackIcon from "../images/resources/black/bilaxy.svg";
 import BittrexBlackIcon from "../images/resources/black/bittrex.svg";
-import PolygonBlackIcon from "../images/resources/black/polygon.svg";
 import BancorBlackIcon from "../images/resources/black/bancor.svg";
-import SushiSwapBlackIcon from "../images/resources/black/sushiswap.svg";
 import LinkedInBlackIcon from "../images/resources/black/linkedin.svg";
 import MediumBlackIcon from "../images/resources/black/medium.svg";
 import GithubBlackIcon from "../images/resources/black/github.svg";
@@ -19,7 +16,6 @@ import EmailBlackIcon from "../images/resources/black/email.svg";
 import SnapshotBlackIcon from "../images/resources/black/snapshot.svg";
 import DrcFoundationBlackIcon from "../images/resources/black/drc-foundation.svg";
 import TrelloBlackIcon from "../images/resources/black/trello.svg";
-import ChartExBlackIcon from "../images/resources/black/chartex.svg";
 import YoutubeBlackIcon from "../images/resources/black/youtube.svg";
 import RedditBlackIcon from "../images/resources/black/reddit.svg";
 import CommunityArtBlackIcon from "../images/resources/black/community-art.svg";
@@ -43,11 +39,8 @@ import EtherscanWhiteIcon from "../images/resources/white/etherscan.svg";
 import CoingeckoWhiteIcon from "../images/resources/white/coingecko.svg";
 import CoinmarketcapWhiteIcon from "../images/resources/white/coinmarketcap.svg";
 import DEXToolsWhiteIcon from "../images/resources/white/dextools.svg";
-import BilaxyWhiteIcon from "../images/resources/white/bilaxy.svg";
 import BittrexWhiteIcon from "../images/resources/white/bittrex.svg";
-import PolygonWhiteIcon from "../images/resources/white/polygon.svg";
 import BancorWhiteIcon from "../images/resources/white/bancor.svg";
-import SushiSwapWhiteIcon from "../images/resources/white/sushiswap.svg";
 import LinkedInWhiteIcon from "../images/resources/white/linkedin.svg";
 import MediumWhiteIcon from "../images/resources/white/medium.svg";
 import GithubWhiteIcon from "../images/resources/white/github.svg";
@@ -55,7 +48,6 @@ import EmailWhiteIcon from "../images/resources/white/email.svg";
 import SnapshotWhiteIcon from "../images/resources/white/snapshot.svg";
 import DrcFoundationWhiteIcon from "../images/resources/white/drc-foundation.svg";
 import TrelloWhiteIcon from "../images/resources/white/trello.svg";
-import ChartExWhiteIcon from "../images/resources/white/chartex.svg";
 import YoutubeWhiteIcon from "../images/resources/white/youtube.svg";
 import RedditWhiteIcon from "../images/resources/white/reddit.svg";
 import CommunityArtWhiteIcon from "../images/resources/white/community-art.svg";
@@ -218,41 +210,17 @@ export const marketLinks = {
     iconBlack: BittrexBlackIcon,
     iconWhite: BittrexWhiteIcon,
   },
-  bilaxy: {
-    displayLabel: "DRC2/ETH<br>Bilaxy",
-    url: "https://bilaxy.com/trade/DRC2_ETH",
-    iconBlack: BilaxyBlackIcon,
-    iconWhite: BilaxyWhiteIcon,
-  },
-  quickswap: {
-    displayLabel: "DRC/MATIC<br>QuickSwap",
-    url: "https://quickswap.exchange/#/swap?outputCurrency=0xfed16c746cb5bfed009730f9e3e6a673006105c7",
-    iconBlack: PolygonBlackIcon,
-    iconWhite: PolygonWhiteIcon,
-  },
   bancor: {
     displayLabel: "DRC/ETH<br>Bancor",
     url: "https://app.bancor.network/eth/swap?from=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&to=0xa150Db9b1Fa65b44799d4dD949D922c0a33Ee606",
     iconBlack: BancorBlackIcon,
     iconWhite: BancorWhiteIcon,
   },
-  sushiswap: {
-    displayLabel: "DRC/ETH<br>SushiSwap",
-    url: "https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0xa150db9b1fa65b44799d4dd949d922c0a33ee606",
-    iconBlack: SushiSwapBlackIcon,
-    iconWhite: SushiSwapWhiteIcon,
-  },
   dexTools: {
     displayLabel: "DRC/ETH<br>DEXTools",
     url: "https://www.dextools.io/app/uniswap/pair-explorer/0x53455f3b566d6968e9282d982dd1e038e78033ac",
     iconBlack: DEXToolsBlackIcon,
     iconWhite: DEXToolsWhiteIcon,
-  },
-  chartEx: {
-    displayLabel: "DRC<br>ChartEx",
-    url: "https://www.chartex.pro/?symbol=UNISWAP:DRC.3EE606&theme=Dark",
-    iconBlack: ChartExBlackIcon,
-    iconWhite: ChartExWhiteIcon,
   },
 };
 
