@@ -49,7 +49,7 @@ const Exchanges: React.FC<ExchangesProps> = ({ lang = "en" }) => {
         </Column>
       </Row>
 
-      <div css={{ display: "flex", justifyContent: "center" }}>
+      {/* <div css={{ display: "flex", justifyContent: "center" }}>
         <Button
           to={marketLinks.bittrex.url}
           target="_blank"
@@ -57,7 +57,7 @@ const Exchanges: React.FC<ExchangesProps> = ({ lang = "en" }) => {
         >
           {bittrexButton[lang]}
         </Button>
-      </div>
+      </div> */}
     </>
   );
 };

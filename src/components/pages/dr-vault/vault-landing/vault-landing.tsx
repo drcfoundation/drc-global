@@ -65,11 +65,11 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
         {context.isConnected && <AccessDr setId={setId} />}
       </MarginBox>
 
-      {setId === "s3" && (
+      {/* {setId === "s3" && (
         <MarginBox margin={{ bottom: grid(4) }}>
           <DrDepositWarning />
         </MarginBox>
-      )}
+      )} */}
 
       <MarginBox margin={{ bottom: grid(4) }}>
         <PortfolioAllocation {...drVaultData} />
@@ -136,7 +136,7 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
         </MarginBox>
       )}
 
-      <DrPerformanceGraph contractAddress={contractAddress} />
+      <DrPerformanceGraph setId={setId} contractAddress={contractAddress} />
 
       {context.isConnected && (
         <>

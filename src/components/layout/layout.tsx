@@ -44,7 +44,7 @@ const Layout: React.FC<LayoutProps> = ({
         <Seal />
       </Container>
 
-      {!hideSocial && <SocialShares />}
+      {/* {!hideSocial && <SocialShares />} */}
 
       <Footer lang={lang} />
     </ThemeProvider>

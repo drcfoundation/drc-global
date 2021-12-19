@@ -1,16 +1,9 @@
 import * as React from "react";
 import { Language } from "../../../../../types/language";
-import { communityLinks } from "../../../../data/resource-links";
 import { STORY_OF_DRC } from "../../../../data/content/story-of-drc";
-import Button from "../../../ui-library/button/button";
 import { grid } from "../../../ui-library/design-tokens/grid";
 import Heading from "../../../ui-library/text/heading";
 import styles from "./story-of-drc.styles";
-
-const buttonText: Record<Language, string> = {
-  en: "VISIT DRC FOUNDATION",
-  zh: "DRC基金会",
-};
 
 interface StoryOfDRCProps {
   lang?: Language;
@@ -32,16 +25,6 @@ const StoryOfDRC: React.FC<StoryOfDRCProps> = ({ lang = "en" }) => {
           dangerouslySetInnerHTML={{ __html: content }}
         />
       ))}
-
-      <div css={styles.buttonContainer}>
-        <Button
-          to={communityLinks.drcFoundation.url}
-          target="_blank"
-          css={styles.button}
-        >
-          {buttonText[lang]}
-        </Button>
-      </div>
     </section>
   );
 };

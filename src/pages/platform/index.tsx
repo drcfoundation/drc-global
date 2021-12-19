@@ -10,7 +10,7 @@ const PlatformPage: React.FC = () => {
     <Layout activeTab={NavTab.Platform}>
       <SEO
         title="Digital Reserve Platform"
-        description="Digital Reserve (DR) is an online platform for DRC token holders to get easy exposure to a basket of the most efficient store of value (SoV) assets."
+        description="Digital Reserve (DR) is a decentralized platform for DRC token holders to get easy exposure to a basket of the most efficient store of value (SoV) assets."
       />
 
       <Platform />

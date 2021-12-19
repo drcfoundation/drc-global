@@ -14,39 +14,39 @@ export const footerLinks = [
     icon: TelegramSmIcon,
     url: communityLinks.telegram.url,
   },
-  {
-    name: "Twitter",
-    icon: TwitterSmIcon,
-    url: communityLinks.twitter.url,
-  },
+  // {
+  //   name: "Twitter",
+  //   icon: TwitterSmIcon,
+  //   url: communityLinks.twitter.url,
+  // },
   {
     name: "Discord",
     icon: DiscordSmIcon,
     url: communityLinks.discord.url,
   },
-  {
-    name: "LinkedIn",
-    icon: LinkedInSmIcon,
-    url: informationLink.linkedIn.url,
-  },
+  // {
+  //   name: "LinkedIn",
+  //   icon: LinkedInSmIcon,
+  //   url: informationLink.linkedIn.url,
+  // },
   {
     name: "Uniswap",
     icon: UniswapSmIcon,
     url: marketLinks.uniswapInfo.url,
   },
-  {
-    name: "Medium",
-    icon: MediumSmIcon,
-    url: informationLink.medium.url,
-  },
+  // {
+  //   name: "Medium",
+  //   icon: MediumSmIcon,
+  //   url: informationLink.medium.url,
+  // },
   {
     name: "CoinGecko",
     icon: CoingeckoSmIcon,
     url: marketLinks.coingecko.url,
   },
-  {
-    name: "Email",
-    icon: EmailSmIcon,
-    url: informationLink.email.url,
-  },
+  // {
+  //   name: "Email",
+  //   icon: EmailSmIcon,
+  //   url: informationLink.email.url,
+  // },
 ];

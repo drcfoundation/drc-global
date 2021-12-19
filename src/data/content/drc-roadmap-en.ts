@@ -45,7 +45,7 @@ export const DRC_ROADMAP_EN = [
     events: [
       {
         content:
-          "The launch of the Digital Reserve, an online platform where DRC holders can get easy exposure to a basket of the most efficient store of value assets.",
+          "The launch of the Digital Reserve, a decentralized platform where DRC holders can get easy exposure to a basket of the most efficient store of value assets.",
         finished: true,
       },
       {

@@ -7,9 +7,7 @@ import MarginBox from "../../ui-library/margin-box/margin-box";
 import LinksSection from "../../ui-library/links-section/links-section";
 import {
   communityResourceLinks,
-  informationResourceLink,
   marketResourceLinks,
-  mediaPostLinks,
 } from "../../../data/resource-link-sections";
 import LogoDivider from "./logo-divider/logo-divider";
 
@@ -54,9 +52,9 @@ const Resources: React.FC<ResourcesProps> = ({ lang = "en" }) => {
         />
       </MarginBox>
 
-      <MarginBox margin={{ bottom: grid(3) }}>
+      {/* <MarginBox margin={{ bottom: grid(3) }}>
         <LinksSection heading={headings.media[lang]} links={mediaPostLinks} />
-      </MarginBox>
+      </MarginBox> */}
 
       <MarginBox margin={{ bottom: grid(3) }}>
         <LinksSection
@@ -64,11 +62,6 @@ const Resources: React.FC<ResourcesProps> = ({ lang = "en" }) => {
           links={marketResourceLinks}
         />
       </MarginBox>
-
-      <LinksSection
-        heading={headings.information[lang]}
-        links={informationResourceLink}
-      />
     </Container>
   );
 };

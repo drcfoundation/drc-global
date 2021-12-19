@@ -45,7 +45,7 @@ const DrVaults: React.FC = () => {
 
   return (
     <section>
-      <MarginBox
+      {/* <MarginBox
         margin={{ desktop: { bottom: grid(5) }, mobile: { bottom: grid(4) } }}
       >
         <ItemPickerTabs
@@ -55,7 +55,7 @@ const DrVaults: React.FC = () => {
           isUniWidth={true}
           onItemClick={(value) => handleClickTab(value as VaultType)}
         />
-      </MarginBox>
+      </MarginBox> */}
 
       {activeTab === "sov" && <SovVaults />}
       {activeTab === "archived" && <ArchivedVaults />}

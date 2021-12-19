@@ -14,7 +14,7 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "What are the benefits of using the DR Vault Sets?",
     answer: [
-      "Digital Reserve is an online platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, by utilising DR Vault Sets, with the purpose of capital preservation and hedging inflation risks.",
+      "Digital Reserve is a decentralized platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, by utilising DR Vault Sets, with the purpose of capital preservation and hedging inflation risks.",
       "DR Vault Set users can take advantage of the portfolio diversification benefits and security of holdings. Also, DR platform offers user friendly interface, and instant deposits and withdrawals.",
     ],
   },
@@ -59,7 +59,7 @@ export const DR_FAQ_QUESTIONS = [
   {
     question: "What happens if there’s not enough DRC liquidity?",
     answer: [
-      "This is not possible based on how the Uniswap Router and AMM (Automatic Market Making) mechanics work. Uniswap DRC LP tokens provided from the genesis liquidity have been burned to ensure there is always liquidity.",
+      "This is not possible based on how the Uniswap Router and AMM (Automatic Market Making) mechanics work. Uniswap DRC LP token provided from the genesis liquidity has been burned to ensure there is always market liquidity for DRC token.",
     ],
   },
   {
@@ -79,6 +79,15 @@ export const DR_FAQ_QUESTIONS = [
     question: "Should I use the DR Vault Sets or just hold DRC?",
     answer: [
       "If you already hold DRC tokens, using the Digital Reserve is optional, as you can simply hold DRC tokens and rely on its potential price appreciation. Utilising the DRC Vault is one way to hold your DRC and still be part of a decentralised application to securely store your DRC tokens.",
+    ],
+  },
+  {
+    question: "Where can I find DR Vault s3",
+    answer: [
+      `Please note that DR Vault s3 has been archived and can be accessible <a href="/platform/dr-vault-s3/">here</a>. Withdrawals from DR Vault s3 can be made anytime, although further deposits are paused.`,
+      "The assets for DR Vault s3 are routed through Uniswap v2 liquidity and during the period of Uniswap v2 and v3 migration, it’s uncertain whether all of the Vault s3 assets will remain on Uniswap v2 or move to v3. If they move, then the DR Vault s3 may experience liquidity issues",
+      "Further, there are unclear regulatory guidelines for DeFi investment protocols at present and this maypresent a challenge for DR Vault s3's compliance.",
+      "Please note that DR Vault s1 and s2 will remain active and available to DR users as they contain highly liquid assets. DRC Vault will also remain available to DR users indefinitely.",
     ],
   },
   {

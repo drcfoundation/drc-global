@@ -14,7 +14,7 @@ interface LinkButtonGroupProps {
 
 const LinkButtonGroup: React.FC<LinkButtonGroupProps> = ({ links }) => {
   return (
-    <Row>
+    <Row isCenter={true}>
       {links.map((link) => (
         <Column key={link.url} spanLg={4} spanMd={4} spanSm={4} spanXs={12}>
           <Button to={link.url} target="_blank" css={{ width: "100%" }}>

@@ -7,21 +7,23 @@ import {
 
 export const communityResourceLinks = [
   communityLinks.telegram,
-  communityLinks.telegramAnnouncements,
-  communityLinks.telegramChinese,
-  communityLinks.telegramOutreach,
-  communityLinks.telegramAfrica,
-  communityLinks.telegramRussia,
+  // communityLinks.telegramAnnouncements,
+  // communityLinks.telegramChinese,
+  // communityLinks.telegramOutreach,
+  // communityLinks.telegramAfrica,
+  // communityLinks.telegramRussia,
   communityLinks.twitter,
   communityLinks.discord,
-  communityLinks.twitterVikings,
+  // communityLinks.twitterVikings,
   communityLinks.snapshot,
   communityLinks.drcFoundation,
   communityLinks.youtube,
   communityLinks.reddit,
   communityLinks.communityArt,
-  communityLinks.officialStore,
-  communityLinks.gitbook,
+  // communityLinks.officialStore,
+  // communityLinks.gitbook,
+  informationLink.medium,
+  informationLink.github,
 ];
 
 export const mediaPostLinks = [
@@ -43,12 +45,5 @@ export const marketResourceLinks = [
   marketLinks.uniswapTrade,
   marketLinks.bittrex,
   marketLinks.bancor,
-  marketLinks.dexTools,
-];
-
-export const informationResourceLink = [
-  informationLink.linkedIn,
-  informationLink.medium,
-  informationLink.github,
-  informationLink.email,
+  // marketLinks.dexTools,
 ];

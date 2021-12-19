@@ -35,14 +35,14 @@ const mainMarketLinks = [
     label: "ETHERSCAN",
     url: marketLinks.etherscan.url,
   },
-  {
-    label: "UNISWAP",
-    url: marketLinks.uniswapTrade.url,
-  },
-  {
-    label: "DEXTOOLS",
-    url: marketLinks.dexTools.url,
-  },
+  // {
+  //   label: "UNISWAP",
+  //   url: marketLinks.uniswapTrade.url,
+  // },
+  // {
+  //   label: "DEXTOOLS",
+  //   url: marketLinks.dexTools.url,
+  // },
 ];
 
 const mainCommunityLinks = [
@@ -98,14 +98,14 @@ const RelatedLinks: React.FC<RelatedLinksProps> = ({ lang = "en" }) => {
         <LinkButtonGroup links={mainMarketLinks} />
       </MarginBox>
 
-      <MarginBox
+      {/* <MarginBox
         margin={{ desktop: { bottom: grid(5) }, mobile: { bottom: grid(2) } }}
       >
         <LinksSection
           heading={mediaSectionHeading[lang]}
           links={mediaPostLinks}
         />
-      </MarginBox>
+      </MarginBox> */}
 
       <MarginBox
         margin={{ desktop: { bottom: grid(8) }, mobile: { bottom: grid(5) } }}
@@ -113,7 +113,7 @@ const RelatedLinks: React.FC<RelatedLinksProps> = ({ lang = "en" }) => {
         <ContractAudit lang={lang} />
       </MarginBox>
 
-      <Heading component="h2" textAlign="center" margin={{ bottom: grid(2) }}>
+      {/* <Heading component="h2" textAlign="center" margin={{ bottom: grid(2) }}>
         {bottomSectionHeading[lang]}
       </Heading>
       <div
@@ -126,7 +126,7 @@ const RelatedLinks: React.FC<RelatedLinksProps> = ({ lang = "en" }) => {
         {bottomSectionSubHeading[lang]}
       </div>
 
-      <LinkButtonGroup links={mainCommunityLinks} />
+      <LinkButtonGroup links={mainCommunityLinks} /> */}
     </section>
   );
 };

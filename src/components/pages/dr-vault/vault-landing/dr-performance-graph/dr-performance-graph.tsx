@@ -15,8 +15,10 @@ import Image from "../../../../ui-library/image/image";
 import SlideOutNetAssetValue from "../../../../ui-library/vault-components/slide-out-vault-info/slide-out-net-asset-value";
 import PerformanceLineChart from "./performance-line-chart";
 import styles from "./dr-performance-graph.styles";
+import { SetId } from "../../../../../../types/dr-vault";
 
 interface DrPerformanceGraphProps {
+  setId: SetId;
   contractAddress: string;
 }
 
@@ -27,6 +29,7 @@ const items: { value: ChartTab; label: string }[] = [
 ];
 
 const DrPerformanceGraph: React.FC<DrPerformanceGraphProps> = ({
+  setId,
   contractAddress,
 }) => {
   const [isInfoOpen, setInfoOpen] = React.useState<boolean>(false);
@@ -70,7 +73,7 @@ const DrPerformanceGraph: React.FC<DrPerformanceGraphProps> = ({
       <div css={styles.headerContainer}>
         <div>
           <Heading margin={{ bottom: grid(1) }}>
-            DR Vault s1 performance
+            DR Vault {setId} performance
           </Heading>
           <Text
             component="div"

@@ -8,9 +8,9 @@ import VaultCard from "../../vault-card/vault-card";
 const ArchivedVaults: React.FC = () => {
   return (
     <>
-      <MarginBox margin={{ bottom: grid(4) }}>
+      {/* <MarginBox margin={{ bottom: grid(4) }}>
         <DrDepositWarning />
-      </MarginBox>
+      </MarginBox> */}
 
       <div>
         <VaultCard {...DR_VAULTS.s3} />

@@ -19,7 +19,7 @@ const VaultActionWithdraw: React.FC = () => {
   const withdrawalInfo = (
     <InfoBox>
       <strong>Withdrawal fees:</strong> Uniswap LP ~0.6% | DRC Foundation:{" "}
-      {data?.feePercentage || 1}%
+      {data?.feePercentage}%
     </InfoBox>
   );
 

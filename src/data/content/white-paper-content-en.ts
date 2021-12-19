@@ -23,7 +23,7 @@ export const WhitePaperContentEn = [
     heading: "IV. DRC ECONOMIC MODEL AND DISTRIBUTION",
     contents: [
       "Digital Reserve Currency (DRC) was designed to become a decentralized digital store of value with a limited supply and a zero inflation rate. DRC was created during the COVID-19 pandemic with the purpose of finding out how the global economic recession and the increasing demand for decentralized financial instruments may affect its adoption and usage.",
-      "The total supply of DRC is fixed at 1,000,000,000 indivisible tokens. DRC did not conduct a token sale and never received any funds from investors. 100% of the total DRC token supply has been issued to the Uniswap market with intentionally low initial market cap to allow early adopters to establish inexpensive exposure to DRC if they believe it will have a larger market in the future.",
+      "The total supply of DRC is fixed at 1,000,000,000 indivisible tokens. DRC did not conduct a token sale and never received any funds from investors. 100% of the total DRC token supply has been issued to the Uniswap market with intentionally low initial market cap to allow early adopters to establish inexpensive exposure to DRC if they believe it will have a larger market in the future. The genesis Uniswap LP token was transferred to the DRC community and burned, to ensure DRC will always have market liquidity.",
       "No DRC tokens have ever been premined or retained by the project developers. DRC has a predetermined finite supply and no more additional DRC tokens will ever be minted. The scarcity of DRC was embedded into the code and nothing can change it once DRC contract was deployed into Ethereum network. The token supply will not be artificially reduced by either buybacks or token burning.",
       "Despite the intentionally small initial market capitalization, we cannot predict whether DRC token will retain its monetary value in the future. DRC token may lose its value if it does not receive adoption as a digital store of value. At the same time, DRC token value may arise because of the network effect, as more people believe in its intrinsic value and utility.",
     ],
@@ -31,7 +31,7 @@ export const WhitePaperContentEn = [
   {
     heading: "V. DIGITAL RESERVE PLATFORM",
     contents: [
-      "DRC token has the unique utility of providing DRC holders with the exclusive access to the Digital Reserve, an essential part of the DRC ecosystem. Digital Reserve is an online platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, with the purpose of capital preservation and hedging inflation risks.",
+      "DRC token has the unique utility of providing DRC holders with the exclusive access to the Digital Reserve, an essential part of the DRC ecosystem. Digital Reserve is a decentralized platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, with the purpose of capital preservation and hedging inflation risks.",
       "The composition and asset allocation of Digital Reserve vaults are decided by the DRC community. There is no single entity or person that manage Digital Reserve, as users interact directly with the Digital Reserve smart contract. The smart contract has been created by the DRC community and audited by the Dedaub blockchain security firm. Digital Reserve assets are held in the smart contract and secured by the Ethereum network.",
     ],
   },

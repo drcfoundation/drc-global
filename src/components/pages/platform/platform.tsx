@@ -45,6 +45,13 @@ const Platform: React.FC<PlatformProps> = ({ lang = "en" }) => {
         <DrVaults />
       </MarginBox>
 
+      <Text component="div" margin={{ bottom: grid(4) }}>
+        Please note the Digital Reserve platform is fully decentralized and does
+        not have customer support and/or operations/development teams. You act
+        at your own risk and bear the sole responsibility for any potential
+        financial losses when interacting with Digital Reserve Vaults.
+      </Text>
+
       <MarginBox
         margin={{ desktop: { bottom: grid(5) }, mobile: { bottom: grid(4) } }}
       >
