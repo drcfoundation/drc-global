@@ -9,9 +9,8 @@ import RelatedLinks from "./related-links/related-links";
 import StoryOfDRC from "./story-of-drc/story-of-drc";
 import HowToBuyVideo from "./how-to-buy-video/how-to-buy-video";
 import Exchanges from "./exchanges/exchanges";
-import Roadmap from "./roadmap/roadmap";
 import styles from "./home.styles";
-import DrPlatform from "./dr-platform/dr-platform";
+import MarketChart from "./market-chart/market-chart";
 
 interface HomeProps {
   lang?: Language;
@@ -37,6 +36,10 @@ const Home: React.FC<HomeProps> = ({ lang = "en" }) => {
         margin={{ desktop: { bottom: grid(8) }, mobile: { bottom: grid(5) } }}
       >
         <StoryOfDRC lang={lang} />
+      </MarginBox>
+
+      <MarginBox margin={{ bottom: grid(8) }}>
+        <MarketChart lang={lang} />
       </MarginBox>
 
       <MarginBox margin={{ bottom: grid(5) }}>
