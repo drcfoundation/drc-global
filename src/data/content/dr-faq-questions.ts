@@ -85,8 +85,8 @@ export const DR_FAQ_QUESTIONS = [
     question: "Where can I find DR Vault s3",
     answer: [
       `Please note that DR Vault s3 has been archived and can be accessible <a href="/platform/dr-vault-s3/">here</a>. Withdrawals from DR Vault s3 can be made anytime, although further deposits are paused.`,
-      "The assets for DR Vault s3 are routed through Uniswap v2 liquidity and during the period of Uniswap v2 and v3 migration, it’s uncertain whether all of the Vault s3 assets will remain on Uniswap v2 or move to v3. If they move, then the DR Vault s3 may experience liquidity issues",
-      "Further, there are unclear regulatory guidelines for DeFi investment protocols at present and this maypresent a challenge for DR Vault s3's compliance.",
+      "The assets for DR Vault s3 are routed through Uniswap v2 liquidity and during the period of Uniswap v2 and v3 migration, it’s uncertain whether all of the Vault s3 assets will remain on Uniswap v2 or move to v3. If they move, then the DR Vault s3 may experience liquidity issues.",
+      "Further, there are unclear regulatory guidelines for DeFi investment protocols at present and this may present a challenge for DR Vault s3's compliance.",
       "Please note that DR Vault s1 and s2 will remain active and available to DR users as they contain highly liquid assets. DRC Vault will also remain available to DR users indefinitely.",
     ],
   },
