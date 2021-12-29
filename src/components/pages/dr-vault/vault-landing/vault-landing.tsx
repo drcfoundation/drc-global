@@ -18,6 +18,7 @@ import InfoCardSmall from "../../../ui-library/vault-components/info-card/info-c
 import SlideOutDrPodInfo from "../../../ui-library/vault-components/slide-out-vault-info/slide-out-dr-pod-info";
 import AccessDr from "./access-dr/access-dr";
 import ConnectWallet from "./access-dr/connect-wallet";
+import DrMaintenance from "./access-dr/dr-maintenance";
 import DrPerformanceGraph from "./dr-performance-graph/dr-performance-graph";
 import PortfolioAllocation from "./portfolio-allocation/portfolio-allocation";
 
@@ -57,6 +58,10 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
       clearInterval(refetchTimer);
     };
   }, []);
+
+  if (setId !== "s3") {
+    return <DrMaintenance setId={setId} />;
+  }
 
   return (
     <div>

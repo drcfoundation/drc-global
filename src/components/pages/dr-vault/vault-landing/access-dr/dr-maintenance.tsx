@@ -10,7 +10,7 @@ const DrMaintenance: React.FC<DrMaintenanceProps> = ({ setId }) => {
   return (
     <AccessDrContainer setId={setId}>
       <div>Digital Reserve {setId} is currently under maintenance.</div>
-      <div>This process might take up to 24 hours.</div>
+      <div>This process might take up to 48 hours.</div>
       <div>Thanks for your patience and understanding.</div>
     </AccessDrContainer>
   );
