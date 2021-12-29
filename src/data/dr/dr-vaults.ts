@@ -110,6 +110,9 @@ export const drAssets: Record<AssetKey, ValueAsset> = {
   },
 };
 
+// 50% BTC, 50% ETH for Vault s1
+// 90% USDC, 10% BTC for Vault s2
+
 export const DR_VAULTS: Record<SetId, DrVaultInfo> = {
   s1: {
     setId: "s1",
@@ -124,9 +127,8 @@ export const DR_VAULTS: Record<SetId, DrVaultInfo> = {
     riskLevel: "Moderate to High",
     url: "/platform/dr-vault-s1/",
     allocations: [
-      { ...drAssets.wbtc, percentage: 40 },
-      { ...drAssets.weth, percentage: 40 },
-      { ...drAssets.paxg, percentage: 20 },
+      { ...drAssets.wbtc, percentage: 50 },
+      { ...drAssets.weth, percentage: 50 },
     ],
     details: [
       "Currently, gold and Bitcoin are considered the most efficient SoV assets. Both of them not much correlated with traditional asset classes and retain their value during economic downturns.",
@@ -147,8 +149,7 @@ export const DR_VAULTS: Record<SetId, DrVaultInfo> = {
     url: "/platform/dr-vault-s2/",
     allocations: [
       { ...drAssets.usdc, percentage: 90 },
-      { ...drAssets.paxg, percentage: 5 },
-      { ...drAssets.wbtc, percentage: 5 },
+      { ...drAssets.wbtc, percentage: 10 },
     ],
     details: [
       "US Dollar is a global reserve currency, used by companies and central banks worldwide. It is also a SoV asset in developing countries with high inflation rates.",

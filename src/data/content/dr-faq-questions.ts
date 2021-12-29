@@ -22,7 +22,7 @@ export const DR_FAQ_QUESTIONS = [
     question: "What are the risks involved with using the DR Vault Sets?",
     answer: [
       "The value of assets held in DR Vault Sets can fluctuate because of the market conditions and there can be a substantial risk that you lose money depositing DRC into DR Vault Sets. You should carefully consider whether using DR Vault Sets is suitable for you in light of your individual risk profile and financial condition.",
-      `"Store of Value" Vaults interact with the Uniswap V2 platform to trade DR Vault assets using DR Vault smart contracts. "Store of Value" Vaults performance relies on the Uniswap V2 functionality and DR Vault assets liquidity on the Uniswap V2 platform. It is recommended to check the operational status of the Uniswap V2 platform and the sufficient liquidity of DR Vault assets (WBTC/WETH, PAXG/WETH, and USDC/WETH pairs) on the Uniswap V2 platform when depositing and withdrawing assets from "Store of Value" Vaults.`,
+      `"Store of Value" Vaults interact with the Uniswap V2 platform to trade DR Vault assets using DR Vault smart contracts. "Store of Value" Vaults performance relies on the Uniswap V2 functionality and DR Vault assets liquidity on the Uniswap V2 platform. It is recommended to check the operational status of the Uniswap V2 platform and the sufficient liquidity of DR Vault assets (WBTC/WETH and USDC/WETH pairs) on the Uniswap V2 platform when depositing and withdrawing assets from "Store of Value" Vaults.`,
     ],
   },
   {

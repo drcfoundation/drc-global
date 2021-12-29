@@ -20,7 +20,6 @@ const desktopContainer = (theme: Theme): Interpolation => ({
     width: "50%",
     flexShrink: 1,
     flexGrow: 1,
-    height: "100%",
   },
 
   "> div:first-of-type": {

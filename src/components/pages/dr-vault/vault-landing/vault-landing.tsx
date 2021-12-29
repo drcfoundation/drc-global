@@ -59,10 +59,6 @@ const VaultLanding: React.FC<VaultLandingProps> = ({ setId }) => {
     };
   }, []);
 
-  if (setId !== "s3") {
-    return <DrMaintenance setId={setId} />;
-  }
-
   return (
     <div>
       <MarginBox margin={{ bottom: grid(4) }}>
