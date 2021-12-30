@@ -131,8 +131,8 @@ export const DR_VAULTS: Record<SetId, DrVaultInfo> = {
       { ...drAssets.weth, percentage: 50 },
     ],
     details: [
-      "Currently, gold and Bitcoin are considered the most efficient SoV assets. Both of them not much correlated with traditional asset classes and retain their value during economic downturns.",
-      "Ethereum is positioned to become a SoV because of the upcoming staking mechanism (Ethereum 2.0) and declining ETH inflation rate. ",
+      "Bitcoin is a digital SoV that can provide a useful hedge for inflation. It is not much correlated with traditional asset classes and retains its value during economic downturns.",
+      "Ethereum is positioned to become a SoV because of the upcoming staking mechanism (Ethereum 2.0) and declining ETH inflation rate.",
     ],
   },
   s2: {
@@ -153,7 +153,7 @@ export const DR_VAULTS: Record<SetId, DrVaultInfo> = {
     ],
     details: [
       "US Dollar is a global reserve currency, used by companies and central banks worldwide. It is also a SoV asset in developing countries with high inflation rates.",
-      "Small portfolio allocation to gold and Bitcoin mitigates US dollar inflation risks, as those assets historically outperform US dollar inflation.",
+      "Small portfolio allocation to Bitcoin mitigates US dollar inflation risks, as Bitcoin historically outperforms US dollar inflation.",
     ],
   },
   s3: {
