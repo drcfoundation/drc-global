@@ -15,10 +15,10 @@ export const communityResourceLinks = [
   communityLinks.twitter,
   communityLinks.discord,
   // communityLinks.twitterVikings,
-  communityLinks.snapshot,
+  // communityLinks.snapshot,
   communityLinks.drcFoundation,
   communityLinks.youtube,
-  communityLinks.reddit,
+  // communityLinks.reddit,
   communityLinks.communityArt,
   // communityLinks.officialStore,
   // communityLinks.gitbook,
@@ -38,12 +38,12 @@ export const mediaPostLinks = [
 ];
 
 export const marketResourceLinks = [
-  marketLinks.uniswapInfo,
+  // marketLinks.uniswapInfo,
   marketLinks.etherscan,
   marketLinks.coingecko,
   marketLinks.coinMarketCap,
-  marketLinks.uniswapTrade,
-  marketLinks.bittrex,
-  marketLinks.bancor,
+  // marketLinks.uniswapTrade,
+  // marketLinks.bittrex,
+  // marketLinks.bancor,
   // marketLinks.dexTools,
 ];
