@@ -38,7 +38,7 @@ export const mediaPostLinks = [
 ];
 
 export const marketResourceLinks = [
-  // marketLinks.uniswapInfo,
+  marketLinks.uniswapInfo,
   marketLinks.etherscan,
   marketLinks.coingecko,
   marketLinks.coinMarketCap,
