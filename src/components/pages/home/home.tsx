@@ -38,15 +38,15 @@ const Home: React.FC<HomeProps> = ({ lang = "en" }) => {
         <StoryOfDRC lang={lang} />
       </MarginBox>
 
-      <MarginBox margin={{ bottom: grid(8) }}>
+      {/* <MarginBox margin={{ bottom: grid(8) }}>
         <MarketChart lang={lang} />
-      </MarginBox>
+      </MarginBox> */}
 
       <MarginBox margin={{ bottom: grid(5) }}>
         <RelatedLinks lang={lang} />
       </MarginBox>
 
-      {lang === "en" && (
+      {/* {lang === "en" && (
         <MarginBox
           margin={{ desktop: { bottom: grid(5) }, mobile: { bottom: grid(3) } }}
         >
@@ -58,7 +58,7 @@ const Home: React.FC<HomeProps> = ({ lang = "en" }) => {
         margin={{ desktop: { bottom: grid(5) }, mobile: { bottom: grid(2) } }}
       >
         <Exchanges lang={lang} />
-      </MarginBox>
+      </MarginBox> */}
 
       {/* {lang === "en" && <Roadmap />} */}
     </Container>
