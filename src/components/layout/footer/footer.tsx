@@ -26,8 +26,8 @@ const Footer: React.FC<FooterProps> = ({ lang }) => {
                 key={link.url}
                 spanLg={1.5}
                 spanMd={1.5}
-                spanSm={3}
-                spanXs={3}
+                spanSm={2}
+                spanXs={2}
                 isNoMarginBottom={true}
               >
                 <a
