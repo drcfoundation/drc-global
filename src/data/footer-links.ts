@@ -34,11 +34,11 @@ export const footerLinks = [
   //   icon: UniswapSmIcon,
   //   url: marketLinks.uniswapInfo.url,
   // },
-  {
-    name: "Medium",
-    icon: MediumSmIcon,
-    url: informationLink.medium.url,
-  },
+  // {
+  //   name: "Medium",
+  //   icon: MediumSmIcon,
+  //   url: informationLink.medium.url,
+  // },
   // {
   //   name: "CoinGecko",
   //   icon: CoingeckoSmIcon,
