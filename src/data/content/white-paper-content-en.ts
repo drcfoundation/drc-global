@@ -15,8 +15,8 @@ export const WhitePaperContentEn = [
   {
     heading: "III. GROWING DEMAND FOR A DIGITAL STORE OF VALUE",
     contents: [
-      "We expect the demand for decentralized “store of value” assets to rise considerably as the risk of currency debasement increases. Institutional and individual investors become more aware of the serious flaws in the current financial system. This awareness will drive demand for non-correlated alternative asset classes and “store of value” assets, especially in the blockchain space. Our conviction is that the monetary value and the security of a store of value need not relate to any centralized power and blockchain technology elegantly solves this problem.",
-      "Currently, gold and bitcoin are considered the most efficient “store of value” assets. Both of them not much correlated with traditional asset classes and retain their market value despite global economic downturns. However, bitcoin has significant advantage over gold because of its digital form, decentralized nature, and portability. At the same time, despite the fact that Bitcoin has an algorithmically predetermined limited supply, it has a disinflationary economic model and its production will continue until ~2140.",
+      "We expect the demand for decentralized “store of value” assets to rise considerably as the risk of currency debasement increases. Institutional and individual investors become more aware of the serious flaws in the current financial system. This awareness will drive demand for non-correlated “store of value” assets. Our conviction is that the monetary value and the security of a store of value need not relate to any centralized power and blockchain technology elegantly solves this problem.",
+      "Currently, gold and bitcoin are considered the most efficient “store of value” assets. Both of them show low correlation with traditional asset classes and retain their market value despite global economic downturns. However, bitcoin has significant advantage over gold because of its digital form, decentralized nature, and portability. At the same time, despite the fact that Bitcoin has an algorithmically predetermined limited supply, it has a disinflationary economic model and its production will continue until ~2140.",
     ],
   },
   {
@@ -30,16 +30,16 @@ export const WhitePaperContentEn = [
   {
     heading: "V. DIGITAL RESERVE PLATFORM",
     contents: [
-      "DRC token has the unique utility of providing DRC holders with the exclusive access to the Digital Reserve, an essential part of the DRC ecosystem. Digital Reserve is a decentralized platform where DRC holders can get instant exposure to the baskets of the most efficient store of value assets, with the purpose of capital preservation and hedging inflation risks.",
-      "The composition and asset allocation of Digital Reserve vaults are decided by the DRC community. There is no single entity or person that manage Digital Reserve, as users interact directly with the Digital Reserve smart contract. The smart contract has been created by the DRC community and audited by the Dedaub blockchain security firm. Digital Reserve assets are held in the smart contract and secured by the Ethereum network.",
+      "DRC token has the unique utility of providing DRC holders with the exclusive access to the Digital Reserve, an essential part of the DRC ecosystem. Digital Reserve is a decentralized platform where DRC holders can get instant exposure to the most efficient store of value assets, with the purpose of capital preservation and hedging inflation risks.",
+      "The composition and asset allocation of Digital Reserve vaults are decided by the DRC community. There is no single entity or person that manage Digital Reserve, as users interact directly with the Digital Reserve smart contract, which was created by the DRC community. Digital Reserve assets are held in the smart contract and secured by the Ethereum network.",
     ],
   },
   {
     heading: "VI. CONCLUSION",
     contents: [
-      "A new asset that has a limited supply and is extremely secure has true value. The fact that it is censorship-resistant and portable makes it more advanced than gold or fiat money. Because of the flaws in the current financial system, with its overvalued assets, leveraged products, and centralized manipulation, the demand for decentralized and censorship-resistant “store of value” assets would increase significantly over time.",
-      "DRC token has the potential to become a decentralized digital store of value with a zero inflation rate. The token is fully developed and operational and its holders are immediately able to use it for its intended functionality on the Ethereum network. The DRC token structure and limited supply are embedded into the code that cannot be changed even by its creator.",
-      "The DRC ecosystem is community-driven. No one has managerial control over DRC nor provides essential managerial efforts that affect its success as the DRC ecosystem has fully decentralized structure.",
+      "A new asset that has a limited supply and is secure has true value. The fact that it is censorship-resistant and portable makes it more advanced than gold or fiat money. Because of the flaws in the current financial system, with its overvalued assets, leveraged products, and centralized manipulation, the demand for decentralized and censorship-resistant “store of value” assets would increase significantly over time.",
+      "DRC token has the potential to become a decentralized digital store of value with a zero inflation rate. The token is fully developed and operational and its holders are immediately able to use it for its intended functionality on the Ethereum network. The DRC token structure and limited supply are embedded into the code and cannot be changed by anyone.",
+      "The DRC ecosystem is community-driven. No one has managerial control over DRC nor provides essential managerial efforts that affect its success as the DRC has fully decentralized structure.",
     ],
   },
 ];
