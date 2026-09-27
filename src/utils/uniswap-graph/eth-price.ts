@@ -1,43 +1,31 @@
 import LRU from "lru-cache";
-import {
-  GetEthPrice,
-  GetEthPriceVariables,
-} from "../../../types/uniswap-graph/GetEthPrice";
-import { uniswapClient } from "../apollo/apollo-client";
-import { GET_ETH_PRICE } from "../apollo/queries/eth-price";
-import { toNumber } from "../format-number";
+import { HashedSimplePriceResult } from "../../../types/api-results/simple-price";
+import { axiosFetch } from "../data-fetch/axios-fetch";
+import { getSimplePriceQueryUrl } from "../coingecko-endpoints";
+import { mapCoinPrice } from "../data-mappings/map-coin-price";
 
 const cache = new LRU<string, number>({
   max: 50000,
   maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
 });
 
-export const getEthPrice = async (blockNumber?: number) => {
-  const cacheKey = blockNumber ? `ethPrice_${blockNumber}` : "ethPrice";
+export const getEthPrice = async () => {
+  const cacheKey = "ethPrice";
   const cachedData: number | undefined = cache.get(cacheKey);
 
   if (cachedData) {
     return cachedData;
   }
 
-  try {
-    const { data } = await uniswapClient.query<
-      GetEthPrice,
-      GetEthPriceVariables
-    >({
-      query: GET_ETH_PRICE,
-      variables: { block: blockNumber ? { number: blockNumber } : null },
-    });
+  const { data } = await axiosFetch<HashedSimplePriceResult>(
+    getSimplePriceQueryUrl({ ids: ["ethereum"] })
+  );
 
-    const ethPrice = toNumber(data.bundle?.ethPrice);
+  const ethPrice = mapCoinPrice(data)?.ethereum?.usd;
 
-    if (ethPrice) {
-      const maxAge = !blockNumber ? 1000 * 60 : undefined;
-      cache.set(cacheKey, ethPrice, maxAge);
-    }
-
-    return ethPrice || null;
-  } catch (err) {
-    return null;
+  if (ethPrice) {
+    cache.set(cacheKey, ethPrice, 1000 * 60);
   }
+
+  return ethPrice || null;
 };

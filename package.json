@@ -5,14 +5,12 @@
   "version": "0.1.0",
   "homepage": "https://drcglobal.org",
   "dependencies": {
-    "@apollo/client": "^3.3.8",
     "@emotion/core": "^10.0.35",
     "@metamask/detect-provider": "^1.2.0",
     "@types/react-scroll": "^1.8.2",
     "@walletconnect/web3-provider": "^1.4.1",
     "axios": "^0.21.1",
     "body-scroll-lock": "^3.1.5",
-    "cross-fetch": "^3.0.6",
     "dateformat": "^3.0.3",
     "electron": "^11.2.2",
     "emotion-theming": "^10.0.27",
@@ -79,8 +77,6 @@
     "gatsby"
   ],
   "scripts": {
-    "apollo-download": "apollo client:download-schema",
-    "apollo-typegen": "yarn apollo-download && apollo client:codegen types/uniswap-graph --outputFlat --target typescript --no-addTypename --localSchemaFile schema.json",
     "build": "rm -rf public && gatsby build",
     "deploy-gh-pages": "gatsby build --prefix-paths && gh-pages -d public",
     "develop": "gatsby develop",

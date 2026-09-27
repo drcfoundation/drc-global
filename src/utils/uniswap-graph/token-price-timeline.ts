@@ -1,15 +1,10 @@
 import LRU from "lru-cache";
-import {
-  GetPairDayDatas,
-  GetPairDayDatasVariables,
-} from "../../../types/uniswap-graph/GetPairDayDatas";
-import {
-  getContractAddress,
-  getPairAddress,
-} from "../../data/dr/contract-by-network";
-import { uniswapClient } from "../apollo/apollo-client";
-import { GET_PAIR_DAY_DATAS } from "../apollo/queries/pair-day-data";
-import { toNumber } from "../format-number";
+import { CoinMarketDataResult } from "../../../types/api-results/coin-market-data";
+import { AssetKey } from "../../../types/dr-vault";
+import { drAssets } from "../../data/dr/dr-vaults";
+import { axiosFetch } from "../data-fetch/axios-fetch";
+import { getCoinMarketDataQueryUrl } from "../coingecko-endpoints";
+import { mapCoinMarketData } from "../data-mappings/map-coin-market-data";
 import { getUnixTimeNowInSec } from "../timestamp";
 
 interface PriceStep {
@@ -21,11 +16,11 @@ const cache = new LRU<string, PriceStep[]>({
   maxAge: 1000 * 60 * 60 * 24,
 });
 
-type TokenName = "weth" | "wbtc" | "paxg" | "usdc" | "farm" | "mph";
+const dayTimeInSec = 24 * 60 * 60;
 
 // Mainnet only function
 export const getTokenPriceTimeline = async (
-  tokenName: TokenName,
+  tokenName: AssetKey,
   startTimestamp: number
 ) => {
   const cacheKey = `${tokenName}PriceTimeline`;
@@ -37,43 +32,26 @@ export const getTokenPriceTimeline = async (
   }
 
   try {
-    const pairAddress =
-      tokenName === "weth" ? getPairAddress("usdc") : getPairAddress(tokenName);
-    const tokenAddress = getContractAddress(tokenName, 1).toLowerCase();
-
+    const coinId = drAssets[tokenName].id;
     const timeNow = getUnixTimeNowInSec();
-    const dayCount = Math.floor((timeNow - startTimestamp) / (24 * 60 * 60));
+    const days = Math.ceil((timeNow - startTimestamp) / dayTimeInSec) + 1;
 
-    const { data } = await uniswapClient.query<
-      GetPairDayDatas,
-      GetPairDayDatasVariables
-    >({
-      query: GET_PAIR_DAY_DATAS,
-      variables: {
-        dayCount,
-        where: {
-          pairAddress,
-          date_gte: startTimestamp,
-        },
-      },
-    });
+    const { data } = await axiosFetch<CoinMarketDataResult>(
+      getCoinMarketDataQueryUrl({ id: coinId, days, interval: "daily" })
+    );
 
-    const tokenPairData = data?.pairDayDatas || [];
-    const tokenPriceTimeline: PriceStep[] = tokenPairData.map((pair) => {
-      const token0 = pair.token0.id.toLowerCase();
-      const reserve0 = toNumber(pair.reserve0);
-      const reserve1 = toNumber(pair.reserve1);
+    const mappedTimeline = mapCoinMarketData(data);
 
-      const reserveOfToken = tokenAddress === token0 ? reserve0 : reserve1;
-      const priceInUSD = reserveOfToken
-        ? pair.reserveUSD / (reserveOfToken * 2)
-        : undefined;
+    if (!mappedTimeline) {
+      return null;
+    }
 
-      return {
-        date: pair.date,
-        price: priceInUSD,
-      };
-    });
+    const tokenPriceTimeline: PriceStep[] = mappedTimeline.map((step) => ({
+      date: Math.round(step.date / 1000),
+      price: step.price,
+    }));
+
+    cache.set(cacheKey, tokenPriceTimeline);
 
     return tokenPriceTimeline;
   } catch (err) {

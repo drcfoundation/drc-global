@@ -41,7 +41,7 @@ export const getVaultPerformanceTimeline = async ({
 
     const tokenPriceLookup: Record<
       string,
-      Record<string, number | undefined> | undefined
+      { date: number; price: number | undefined }[] | undefined
     > = {};
     for (const token of tokens) {
       const dailyPriceTimeline = await getTokenPriceTimeline(
@@ -53,22 +53,34 @@ export const getVaultPerformanceTimeline = async ({
         maxLength = Math.min(maxLength, dailyPriceTimeline.length);
       }
 
-      const hashedPrice = dailyPriceTimeline?.reduce(
-        (hashed: Record<string, number | undefined>, cur) => {
-          hashed[cur.date] = cur.price;
-          return hashed;
-        },
-        {}
-      );
-      tokenPriceLookup[token] = hashedPrice;
+      tokenPriceLookup[token] = dailyPriceTimeline || undefined;
     }
+
+    // CoinGecko's daily snapshots don't land on the exact same UTC-day
+    // boundary as the vault's own event-derived day buckets, so find the
+    // latest known price on or before each step instead of an exact match.
+    const findPriceAt = (token: string, timestamp: number) => {
+      const timeline = tokenPriceLookup[token];
+      if (!timeline) {
+        return undefined;
+      }
+
+      let price: number | undefined;
+      for (const point of timeline) {
+        if (point.date > timestamp) {
+          break;
+        }
+        price = point.price;
+      }
+      return price;
+    };
 
     let step0Price = 0;
 
     const tokenUsdValueTimeline: TokenValueTimeStep[] = tokensStoredTimeline
       .map((step, index) => {
         const tvl = step.tokens.reduce((total: number, token, index) => {
-          const tokenPrice = tokenPriceLookup[token]?.[step.timestamp] || 0;
+          const tokenPrice = findPriceAt(token, step.timestamp) || 0;
           const tokenAmount = step.tokensStored[index];
           total += tokenPrice * tokenAmount;
           return total;

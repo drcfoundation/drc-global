@@ -1,29 +1,47 @@
 import LRU from "lru-cache";
+import { CoinHistoryResult } from "../../../types/api-results/coin-history";
+import { HashedSimplePriceResult } from "../../../types/api-results/simple-price";
+import { DrCoinId, AssetKey } from "../../../types/dr-vault";
+import { axiosFetch } from "../data-fetch/axios-fetch";
 import {
-  GetPairPrice,
-  GetPairPriceVariables,
-} from "../../../types/uniswap-graph/GetPairPrice";
-import {
-  getContractAddress,
-  getPairAddress,
-} from "../../data/dr/contract-by-network";
-import { uniswapClient } from "../apollo/apollo-client";
-import { GET_PAIR_PRICE } from "../apollo/queries/pair-price";
+  getCoinHistoryQueryUrl,
+  getSimplePriceQueryUrl,
+} from "../coingecko-endpoints";
+import { mapCoinPrice } from "../data-mappings/map-coin-price";
 import { toNumber } from "../format-number";
-import { getEthPrice } from "./eth-price";
+import { dataWeb3 } from "../web3/data-web3";
+import { getBlockTimestamp } from "../web3/get-block-timestamp";
 
 const cache = new LRU<string, number>({
   max: 50000,
   maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
 });
 
-type PairName = "drc" | "wbtc" | "paxg" | "usdc";
+type PairName = AssetKey | "drc";
+
+const pairNameToCoinId: Record<PairName, DrCoinId> = {
+  drc: "digital-reserve-currency",
+  wbtc: "bitcoin",
+  paxg: "pax-gold",
+  weth: "ethereum",
+  usdc: "usd-coin",
+  farm: "harvest-finance",
+  mph: "88mph",
+};
+
+const formatDateForCoingecko = (unixTimeInSec: number) => {
+  const date = new Date(unixTimeInSec * 1000);
+  const day = String(date.getUTCDate()).padStart(2, "0");
+  const month = String(date.getUTCMonth() + 1).padStart(2, "0");
+  return `${day}-${month}-${date.getUTCFullYear()}`;
+};
 
 // Mainnet only function
 export const getTokenPrice = async (
   pairName: PairName,
   blockNumber?: number
 ) => {
+  const coinId = pairNameToCoinId[pairName];
   const cacheKey = blockNumber
     ? `${pairName}Price_${blockNumber}`
     : `${pairName}Price`;
@@ -35,34 +53,32 @@ export const getTokenPrice = async (
   }
 
   try {
-    const pairAddress = getPairAddress(pairName);
-    const tokenAddress = getContractAddress(pairName, 1).toLowerCase();
+    if (!blockNumber) {
+      const { data } = await axiosFetch<HashedSimplePriceResult>(
+        getSimplePriceQueryUrl({ ids: [coinId] })
+      );
+      const price = mapCoinPrice(data)?.[coinId]?.usd;
 
-    const { data } = await uniswapClient.query<
-      GetPairPrice,
-      GetPairPriceVariables
-    >({
-      query: GET_PAIR_PRICE,
-      variables: {
-        id: pairAddress,
-        block: blockNumber ? { number: blockNumber } : null,
-      },
-    });
+      if (price) {
+        cache.set(cacheKey, price, 1000 * 60);
+      }
 
-    const token0 = data.pair?.token0.id.toLowerCase();
-    const price0 = toNumber(data.pair?.token0Price);
-    const price1 = toNumber(data.pair?.token1Price);
-
-    const priceInEth = tokenAddress === token0 ? price1 : price0;
-    const ethPrice = await getEthPrice(blockNumber);
-
-    if (priceInEth && ethPrice) {
-      const price = priceInEth * ethPrice;
-      cache.set(cacheKey, price, 1000 * 60);
-      return price;
+      return price || null;
     }
 
-    return null;
+    const blockTimestamp = await getBlockTimestamp(dataWeb3, blockNumber);
+    const date = formatDateForCoingecko(blockTimestamp);
+
+    const { data } = await axiosFetch<CoinHistoryResult>(
+      getCoinHistoryQueryUrl({ id: coinId, date })
+    );
+    const price = toNumber(data?.market_data?.current_price?.usd);
+
+    if (price) {
+      cache.set(cacheKey, price);
+    }
+
+    return price || null;
   } catch (err) {
     return null;
   }

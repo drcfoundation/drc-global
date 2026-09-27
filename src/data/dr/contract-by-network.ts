@@ -71,7 +71,7 @@ export const getContractAddress = (
   return contractAddresses[name][networkType] || ADDRESS_0;
 };
 
-type PairName = "drc" | "wbtc" | "paxg" | "usdc" | "farm" | "mph";
+export type PairName = "drc" | "wbtc" | "paxg" | "usdc" | "farm" | "mph";
 
 const pairAddress: Record<PairName, string> = {
   drc: "0x53455f3b566d6968e9282d982dd1e038e78033ac",

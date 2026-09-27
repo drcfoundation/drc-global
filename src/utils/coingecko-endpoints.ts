@@ -52,6 +52,26 @@ export const getCoinDetailQueryUrl = ({ id }: CoinDetailEndpointOptions) => {
   );
 };
 
+interface CoinHistoryEndpointOptions {
+  id: string;
+  date: string; // DD-MM-YYYY, as required by the CoinGecko history endpoint
+}
+
+export const getCoinHistoryQueryUrl = ({
+  id,
+  date,
+}: CoinHistoryEndpointOptions) => {
+  const params: { [key: string]: string | number } = {
+    date,
+    localization: "false",
+  };
+
+  return createUrlWithParams(
+    `https://api.coingecko.com/api/v3/coins/${id}/history`,
+    params
+  );
+};
+
 interface CoinMarketDataEndpointOptions {
   id: string;
   days: MarketDays | number;
